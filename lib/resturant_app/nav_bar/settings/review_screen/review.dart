@@ -14,12 +14,14 @@ class Reveiw extends StatelessWidget {
     return BlocConsumer<HomeCubit, HomeState>(
       listener: (context, state) {
         if(state is ResturantReviewSuccessState ){
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            backgroundColor: Colors.green,
-            content: Text('Done!'),
-            padding: EdgeInsetsDirectional.all(20),
-            duration: Duration(milliseconds: 800),
-          ));
+          if(state.sendReview.status){
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              backgroundColor: Colors.green,
+              content: Text(state.sendReview.massege),
+              padding: EdgeInsetsDirectional.all(20),
+              duration: Duration(milliseconds: 800),
+            ));
+          }
         }
       },
       builder: (context, state) {
@@ -28,16 +30,48 @@ class Reveiw extends StatelessWidget {
             children: [
               design(
                   chiled: Padding(
-                padding: const EdgeInsets.only(top: 150),
+                padding: const EdgeInsets.only(top: 100),
                 child: SingleChildScrollView(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      defaultFormField(
-                        maxLines: 3,
-                        controller: reveiwController,
-                        label: 'reveiw',
-                        type: TextInputType.text,
-                        prefix: Icons.rate_review_outlined,
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Container(
+                          height: 100,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey[200]
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                                child: Text(
+                                  'Feedback is important to us because it helps us progress and solve problems',
+                                  style: TextStyle(
+                                    height: 1.3,
+                                      fontSize: 22,
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.w600
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: defaultFormField(
+                          maxLines: 3,
+                          controller: reveiwController,
+                          label: 'reveiw',
+                          type: TextInputType.text,
+                          prefix: Icons.rate_review_outlined,
+                        ),
                       ),
                       SizedBox(
                         height: 80,
@@ -45,7 +79,7 @@ class Reveiw extends StatelessWidget {
                       Center(
                         child: Padding(
                           padding: const EdgeInsets.only(
-                              top: 20.0, left: 20, right: 20),
+                               left: 20, right: 20),
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),

@@ -12,6 +12,8 @@ import 'package:untitled1/model/home_model.dart';
 import 'package:untitled1/model/order_model.dart';
 import 'package:untitled1/model/product_detailes_model.dart';
 import 'package:untitled1/model/reservation_model.dart';
+import 'package:untitled1/model/review_model.dart';
+import 'package:untitled1/model/send_review_model.dart';
 import 'package:untitled1/model/user_model.dart';
 import 'package:untitled1/resturant_app/nav_bar/cart/cart_screen.dart';
 import 'package:untitled1/resturant_app/nav_bar/favorite_screen/favorite.dart';
@@ -310,7 +312,7 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   //--------------------------------- review ------------------------------------------//
-  UserModel review;
+  SendReview review;
 
   void userReview({
     @required String comment,
@@ -323,8 +325,8 @@ class HomeCubit extends Cubit<HomeState> {
             },
             token: token)
         .then((value) {
-      review = UserModel.fromJson(value.data);
-      emit(ResturantReviewSuccessState());
+      review = SendReview.fromJson(value.data);
+      emit(ResturantReviewSuccessState(review));
     }).catchError((error) {
       emit(ResturantReviewErrorState(error.toString()));
     });
@@ -449,6 +451,19 @@ class HomeCubit extends Cubit<HomeState> {
     }).catchError((error) {
       print(error.toString());
       emit(CartErrorUpdateQuantityState());
+    });
+  }
+
+  ReviewModel reviewModel;
+  Future getReviewData() async{
+    emit(LoadingReview());
+    DioHelper.getdata(url: GET_REVIEW, token: token).then((value) {
+      reviewModel = ReviewModel.fromJson(value.data);
+      emit(SuccessReview());
+      print(value.data);
+    }).catchError((error) {
+      emit(ErrorReview());
+      print(error.toString());
     });
   }
 }

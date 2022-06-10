@@ -16,7 +16,7 @@ import 'package:untitled1/shared/remote/dio_helper.dart';
 
 import 'resturant_app/nav_bar/settings/review_screen/cubit/cubit.dart';
 
-
+//hello iam measser
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
@@ -59,7 +59,8 @@ class MyApp extends StatelessWidget {
             create: (BuildContext context) => HomeCubit()
               ..getHomeData()
               ..getFavorites()
-              ..getUserData()),
+              ..getUserData()
+              ..getReviewData()),
       ],
       child: BlocConsumer<KaleCrazyCubit, KaleCrazyState>(
         listener: (BuildContext context, state) {},
@@ -71,7 +72,7 @@ class MyApp extends StatelessWidget {
               minWidth: 480,
               defaultScale: true,
               breakpoints: [
-                ResponsiveBreakpoint.resize(380, name: MOBILE),
+                ResponsiveBreakpoint.resize(420, name: MOBILE),
                 ResponsiveBreakpoint.autoScale(800, name: TABLET),
                 ResponsiveBreakpoint.resize(1000, name: DESKTOP),
                 ResponsiveBreakpoint.autoScale(2460, name: '4K'),

@@ -13,3 +13,4 @@ const FORGET_PASSWORD = 'api/reset/';
 const LOGIN = 'api/login/';
 const REGISTER = 'api/register/';
 const SEARCH = 'product/search/';
+const GET_REVIEW = 'staff/Reviews/';

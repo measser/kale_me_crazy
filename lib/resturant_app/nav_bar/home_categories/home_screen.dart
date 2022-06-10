@@ -6,6 +6,7 @@ import 'package:untitled1/layout/categories_layout/categories_layout/cubit/state
 import 'package:untitled1/model/home_model.dart';
 import 'package:untitled1/model/user_model.dart';
 import 'package:untitled1/resturant_app/nav_bar/home_categories/dish_detailes_screen.dart';
+import 'package:untitled1/resturant_app/nav_bar/settings/review_screen/review.dart';
 import 'package:untitled1/shared/components/component.dart';
 import 'package:untitled1/shared/remote/colors/colors.dart';
 
@@ -23,6 +24,13 @@ class HomeScreen extends StatelessWidget {
 
         return Scaffold(
           backgroundColor: Colors.white,
+          floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.comment),
+            onPressed: ()
+            {
+              navegateTo(context,Reveiw());
+            },
+          ),
           body: Padding(
             padding: const EdgeInsets.all(20.0),
             child: RefreshIndicator(
@@ -131,7 +139,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 0.0,
           crossAxisSpacing: 20.0,
-          childAspectRatio: 1 / 1.8,
+          childAspectRatio: 1 / 1.6,
           children: List.generate(model.data.homepage.length,
               (index) => buildGridProduct(model.data.homepage[index], context)),
         )
@@ -196,7 +204,7 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      ' ${model.dishPrice}',
+                      ' ${model.dishPrice}'+' '+'\$',
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,

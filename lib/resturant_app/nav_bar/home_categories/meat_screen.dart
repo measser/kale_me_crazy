@@ -126,7 +126,7 @@ class MeatScreen extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 0.0,
           crossAxisSpacing: 20.0,
-          childAspectRatio: 1 / 1.8,
+          childAspectRatio: 1 / 1.6,
           children: List.generate(model.data.category.elementAt(1).products.product.length,
                   (index) => buildGridProduct(model.data.category.elementAt(1).products.product[index], context)),
         )
@@ -193,7 +193,7 @@ class MeatScreen extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  ' ${model.dishPrice}',
+                  ' ${model.dishPrice}'+' '+'\$',
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,

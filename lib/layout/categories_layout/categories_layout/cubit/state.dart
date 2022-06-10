@@ -4,6 +4,7 @@ import 'package:untitled1/model/change_favorites_model.dart';
 import 'package:untitled1/model/change_password_model.dart';
 import 'package:untitled1/model/order_model.dart';
 import 'package:untitled1/model/reservation_model.dart';
+import 'package:untitled1/model/send_review_model.dart';
 import 'package:untitled1/model/user_model.dart';
 
 abstract class HomeState {}
@@ -121,7 +122,13 @@ class ResturantChangepasswordChangeChangeRadioState extends HomeState {}
 
 class ResturantReviewLoadingState extends HomeState {}
 
-class ResturantReviewSuccessState extends HomeState {}
+class ResturantReviewSuccessState extends HomeState
+{
+  final SendReview sendReview ;
+
+  ResturantReviewSuccessState(this.sendReview);
+
+}
 
 class ResturantReviewErrorState extends HomeState {
   final String error;
@@ -186,3 +193,9 @@ class ResturantSuccessOrderDataStates extends HomeState {
 }
 
 class ResturantErrorOrderDataStates extends HomeState {}
+
+class LoadingReview extends HomeState{}
+
+class SuccessReview extends HomeState{}
+
+class ErrorReview extends HomeState{}

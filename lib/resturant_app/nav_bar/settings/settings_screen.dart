@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/layout/categories_layout/kale_me_crazy/cubit/cubit.dart';
 import 'package:untitled1/resturant_app/nav_bar/settings/account_info/account_info.dart';
+import 'package:untitled1/resturant_app/nav_bar/settings/revew/revew_screen.dart';
 import 'package:untitled1/resturant_app/nav_bar/settings/review_screen/order_screen.dart';
 import 'package:untitled1/shared/components/component.dart';
 import 'package:untitled1/shared/remote/colors/colors.dart';
@@ -97,6 +98,22 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Review',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                      Spacer(),
+                      IconButton(
+                          onPressed: () {
+                            navegateTo(context, ReviewScreen());
+                          },
+                          icon: Icon(Icons.arrow_forward_ios_outlined)),
+                    ],
                   ),
                   Center(
                     child: Padding(
