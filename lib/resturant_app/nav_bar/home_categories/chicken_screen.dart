@@ -54,7 +54,7 @@ class ChickenScreen extends StatelessWidget {
 
         //اسم العميل
         Text(
-          '${'Hi'+' '+user.user.firstname +' '+user.user.lastname}',
+          '${'Hi'+' '+user.user.firstname } !',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20,
