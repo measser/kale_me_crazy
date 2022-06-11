@@ -51,7 +51,7 @@ class Reveiw extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 8.0),
                                 child: Text(
-                                  'Feedback is important to us because it helps us progress and solve problems',
+                                  'Feedback is important to us because it helps us progress and solve problems.',
                                   style: TextStyle(
                                     height: 1.3,
                                       fontSize: 22,
@@ -68,7 +68,7 @@ class Reveiw extends StatelessWidget {
                         child: defaultFormField(
                           maxLines: 3,
                           controller: reveiwController,
-                          label: 'reveiw',
+                          label: 'Reveiw',
                           type: TextInputType.text,
                           prefix: Icons.rate_review_outlined,
                         ),

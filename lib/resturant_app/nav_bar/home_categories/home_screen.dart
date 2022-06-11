@@ -62,31 +62,30 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget homeProductsBuilder(UserModel user,HomeAndCategoryModel model, context) =>
-      Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Column(crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
 
         //اسم العميل
         Text(
-          '${'Hi'+' '+user.user.firstname +' '+user.user.lastname}',
+          '${'Hi'+' '+user.user.firstname } !',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20,
           ),
         ),
-        SizedBox(
-          height: 20,
-        ),
-        Text(
-          'What do you',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
+        SizedBox(height: 20,),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+
           ),
-        ),
-        Text(
-          'want to eat today?',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
+          child: Text(
+            'What do you \nwant to eat today? ',
+            style: TextStyle(
+              height: 1.3,
+              fontWeight: FontWeight.bold,
+              fontSize: 30,
+            ),
           ),
         ),
         //الفورم فيلت ثابت وانا استدعيته من الكبوننت (السيرش)

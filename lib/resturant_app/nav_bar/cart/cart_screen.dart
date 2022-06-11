@@ -284,7 +284,7 @@ class CartScreen extends StatelessWidget {
             return Scaffold(
               backgroundColor: Colors.white,
               appBar: AppBar(
-                title: Text('Cart Screen',style: TextStyle(
+                title: Text('Cart screen',style: TextStyle(
                   color: Colors.black
                 ),),
                 backgroundColor: Colors.white,
@@ -352,7 +352,7 @@ class CartScreen extends StatelessWidget {
                                   ),
                                   child: Row(
                                     children: [
-                                      Expanded(child: Text('Total Price :',style: TextStyle(
+                                      Expanded(child: Text('Total price :',style: TextStyle(
                                         fontSize: 20.0,
                                         fontWeight: FontWeight.bold,
                                       ),)),
@@ -362,7 +362,7 @@ class CartScreen extends StatelessWidget {
                                               .cartModel
                                               .data
                                               .totalPrice
-                                              .toString(),
+                                              .toString()+' \$',
                                           style: TextStyle(
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold,
@@ -402,7 +402,7 @@ class CartScreen extends StatelessWidget {
                                   ),
                                   SizedBox(width: 5,),
                                   Text(
-                                    'Cart is Empty',
+                                    'Cart is Empty'.toUpperCase(),
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.bold,
@@ -488,7 +488,7 @@ Widget cartBuilder(CartItem model, context) => Padding(
                       height: 20,
                     ),
                     Text(
-                      model.dish.dishPrice,
+                      model.dish.dishPrice +' \$',
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -502,48 +502,6 @@ Widget cartBuilder(CartItem model, context) => Padding(
               SizedBox(
                 width:5,
               ),
-              // CircleAvatar(
-              //   backgroundColor: defaultColor,
-              //   radius: 20,
-              //   child: IconButton(
-              //     alignment: Alignment.center,
-              //     onPressed: () {
-              //       if (model.quantity > 1) {
-              //         HomeCubit.get(context).updateQuantityOfInCartProduct(
-              //             model.id, model.quantity-1);
-              //       }
-              //     },
-              //     icon: Icon(
-              //       Icons.remove,
-              //       color: Colors.white,
-              //     ),
-              //   ),
-              // ),
-              // SizedBox(
-              //   width: 5,
-              // ),
-              // Text(model.quantity.toString(),
-              //     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800)),
-              // SizedBox(
-              //   width: 5,
-              // ),
-              // CircleAvatar(
-              //   backgroundColor: defaultColor,
-              //   radius: 20,
-              //   child: IconButton(
-              //     alignment: Alignment.center,
-              //     onPressed: () {
-              //       HomeCubit.get(context).updateQuantityOfInCartProduct(
-              //           model.id, model.quantity + 1
-              //       );
-              //       print(model.id);
-              //     },
-              //     icon: Icon(
-              //       Icons.add,
-              //       color: Colors.white,
-              //     ),
-              //   ),
-              // ),
                      Container(
                         height: 35,
                         decoration: BoxDecoration(
@@ -572,9 +530,6 @@ Widget cartBuilder(CartItem model, context) => Padding(
                                 ),
                               ),
                             ),
-                            // SizedBox(
-                            //   width: 10,
-                            // ),
                             Container(
                               alignment: Alignment.center,
                               height: 35,
@@ -591,9 +546,6 @@ Widget cartBuilder(CartItem model, context) => Padding(
                                 ),
                               ),
                             ),
-                            // SizedBox(
-                            //   width: 10,
-                            // ),
                             Padding(
                               padding: const EdgeInsets.only(right: 8.0),
                               child: Container(
@@ -633,116 +585,3 @@ Widget cartBuilder(CartItem model, context) => Padding(
       ),
     );
 
-// Widget cartBuilder(CartItem model, context) =>
-//     Padding(
-//       padding: const EdgeInsets.all(20.0),
-//       child: Container(
-//         width: double.infinity,
-//         child: Row(
-//           mainAxisAlignment: MainAxisAlignment.start,
-//           children: [
-//             Image(
-//               image: NetworkImage(model.dish.dishImage
-//               ),
-//               height: 100,
-//               width: 100,
-//             ),
-//             SizedBox(
-//               width: 15,
-//             ),
-//             Expanded(
-//               child: Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [ SizedBox(
-//                   height: 15,
-//                 ),
-//                   Text(
-//                     model.dish.dishName,
-//                     style: TextStyle(
-//                       fontSize: 20,
-//                       fontWeight: FontWeight.bold,
-//                     ),
-//                     overflow: TextOverflow.ellipsis,
-//                     maxLines: 1,
-//                   ), SizedBox(
-//                     height: 20,
-//                   ),
-//                   Text(
-//                     model.dish.dishPrice,
-//                     style: TextStyle(
-//                         fontSize: 20,
-//                         fontWeight: FontWeight.bold,
-//                         color: Colors.grey
-//                     ),
-//                     overflow: TextOverflow.ellipsis,
-//                     maxLines: 1,
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(
-//               width: 15,
-//             ),
-//             CircleAvatar(
-//               backgroundColor: defaultColor,
-//               radius: 20,
-//               child: IconButton(
-//                 alignment: Alignment.center,
-//                 onPressed: () {
-//                   HomeCubit.get(context).updateQuantityOfInCartProduct(
-//                       model.id, model.quantity + 1);
-//                 },
-//                 icon: Icon(
-//                   Icons.add,
-//                   color: Colors.grey[350],
-//                 ),
-//               ),
-//             ),
-//             SizedBox(
-//               width: 5,
-//             ),
-//             Text(model.quantity.toString(),
-//                 style: TextStyle(
-//                     fontSize: 15,
-//                     fontWeight: FontWeight.w800
-//                 )),
-//             SizedBox(
-//               width: 5,
-//             ),
-//             CircleAvatar(
-//               backgroundColor: defaultColor,
-//               radius: 20,
-//               child: IconButton(
-//                 alignment: Alignment.center,
-//                 onPressed: () {   if (model.quantity > 1) {
-//
-//                   HomeCubit.get(context).updateQuantityOfInCartProduct(
-//                       model.id,model.quantity);
-//
-//
-//                 }
-//
-//                 },
-//                 icon: Icon(
-//                   Icons.remove,
-//                   color: Colors.grey[350],
-//                 ),
-//               ),
-//             ), SizedBox(
-//               width: 10,
-//             ),
-//             IconButton(
-//               onPressed: () {
-//                 // HomeCubit.get(context)
-//                 //     .deleteCarts(model.id);
-//               },
-//               icon: Icon(
-//                 Icons.delete_forever,
-//                 color: Colors.red[800],
-//                 size: 30,
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );

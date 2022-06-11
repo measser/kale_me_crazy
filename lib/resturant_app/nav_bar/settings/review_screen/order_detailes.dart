@@ -22,7 +22,7 @@ class OrderDetailesScreen extends StatelessWidget {
               color: Colors.black
             ),
 
-            title: Text('your order',style: TextStyle(
+            title: Text('Your order',style: TextStyle(
               color: Colors.black
             ),),
           ),
@@ -84,7 +84,7 @@ class OrderDetailesScreen extends StatelessWidget {
                     width: 10.0,
                   ),
                   Text(
-                    orders.price.toString(),
+                    orders.price.toString()+' \$',
                     style: TextStyle(
                       fontSize: 14.0,
                       color: Colors.blue,

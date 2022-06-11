@@ -93,40 +93,6 @@ class FavoritesScreen extends StatelessWidget {
             body: Stack(
             children: [
             design(
-                // chiled: ConditionalBuilder(
-                //   condition: state is! ResturantLoadingGetFavoritesState,
-                //   builder: (context) => ListView.separated(
-                //     itemBuilder: (context, index) => buildListProduct(
-                //         HomeCubit.get(context).favoritesModel.data.product[index],
-                //         context),
-                //     separatorBuilder: (context, index) => Container(
-                //       width: double.infinity,
-                //       height: 1,
-                //       color: Colors.grey[300],
-                //     ),
-                //     itemCount:
-                //         HomeCubit.get(context).favoritesModel.data.product.length,
-                //   ),
-                //   fallback: (context) =>
-                //       Center(
-                //         child: Column(
-                //           mainAxisAlignment: MainAxisAlignment.center,
-                //           children: [
-                //             Icon(
-                //               Icons.favorite,
-                //               size: 100,
-                //               color: Colors.red,
-                //             ),Text(
-                //               'No Favorite Items Yet, Please Add some',style: TextStyle(
-                //               fontSize: 10,
-                //               fontWeight: FontWeight.bold,
-                //               color: Colors.grey
-                //             ),
-                //             )
-                //           ],
-                //         ),
-                //       )
-                // ),
                 chiled: Padding(
               padding: const EdgeInsets.only(top: 80.0),
               child: Conditional.single(
@@ -193,7 +159,7 @@ class FavoritesScreen extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              'No Favorite Items Yet, Please Add some',
+                              'No favorite items yet, Please add some.',
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,

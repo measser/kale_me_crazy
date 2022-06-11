@@ -301,7 +301,7 @@ Widget buildListProduct(model, context) => Padding(
                   Row(
                     children: [
                       Text(
-                        model.dishPrice.toString(),
+                        model.dishPrice.toString()+' \$',
                         style: TextStyle(
                           fontSize: 12.0,
                           color: Colors.blue,
@@ -385,7 +385,7 @@ Widget buildListProductSearch(model, context) => Padding(
               Row(
                 children: [
                   Text(
-                    model.dishPrice.toString(),
+                    model.dishPrice.toString()+' \$',
                     style: TextStyle(
                       fontSize: 12.0,
                       color: Colors.blue,

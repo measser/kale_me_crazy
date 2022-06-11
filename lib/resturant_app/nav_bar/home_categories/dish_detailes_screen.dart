@@ -80,7 +80,7 @@ class DishDetails extends StatelessWidget {
                                       " " +
                                       product.data.dishPrice +
                                       ' ' +
-                                      'EG',
+                                      ' \$',
                                   style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,

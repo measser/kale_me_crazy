@@ -20,7 +20,7 @@ class SignupScreen extends StatelessWidget {
   var phoneController = TextEditingController();
   var addressController = TextEditingController();
   var birthdateController = TextEditingController();
-  bool isMale = false;
+  bool isMale = true;
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +128,7 @@ class SignupScreen extends StatelessWidget {
                                 defaultFormField(
                                   controller: userNameController,
                                   prefix: Icons.person,
-                                  label: 'user name',
+                                  label: 'User name',
                                   type: TextInputType.text,
                                   validate: (String value) {
                                     if (value.isEmpty) {
@@ -141,7 +141,7 @@ class SignupScreen extends StatelessWidget {
                                 ),
                                 defaultFormField(
                                   controller: birthdateController,
-                                  label: 'birth of date',
+                                  label: 'Date of birth',
                                   prefix: Icons.date_range_outlined,
                                   type: TextInputType.datetime,
                                   validate: (String value) {
@@ -201,9 +201,6 @@ class SignupScreen extends StatelessWidget {
                                     }
                                   },
                                 ),
-                                SizedBox(
-                                  height: 15,
-                                ),
                                 // defaultFormField(
                                 //   controller: confirmController,
                                 //   label: 'Confirm password',
@@ -244,7 +241,7 @@ class SignupScreen extends StatelessWidget {
                                 ),
                                 defaultFormField(
                                   controller: addressController,
-                                  label: 'address',
+                                  label: 'Address',
                                   prefix: Icons.add_location_alt_outlined,
                                   type: TextInputType.text,
                                   validate: (String value) {
@@ -276,7 +273,7 @@ class SignupScreen extends StatelessWidget {
                                     Row(
                                       children: [
                                         Text(
-                                          'male',
+                                          'Male',
                                           style: TextStyle(
                                             fontSize: 20,
                                             fontWeight: FontWeight.w600,
@@ -304,7 +301,7 @@ class SignupScreen extends StatelessWidget {
                                     Row(
                                       children: [
                                         Text(
-                                          'female',
+                                          'Female',
                                           style: TextStyle(
                                             fontSize: 20,
                                             fontWeight: FontWeight.w600,

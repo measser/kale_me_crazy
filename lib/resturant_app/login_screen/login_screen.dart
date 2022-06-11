@@ -111,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                                 //ثابت بتاع الفورم فيلد وانا بستدعيه من الكومبوننت
                                 defaultFormField(
                                   controller: emailController,
-                                  label: 'email',
+                                  label: 'Email',
                                   prefix: Icons.email_outlined,
                                   type: TextInputType.emailAddress,
                                   validate: (String value) {
@@ -125,7 +125,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 defaultFormField(
                                   controller: passwordController,
-                                  label: 'password',
+                                  label: 'Password',
                                   prefix: Icons.lock_outline,
                                   type: TextInputType.visiblePassword,
                                   suffix: ResturantLoginCubit.get(context).suffix,
@@ -151,7 +151,7 @@ class LoginScreen extends StatelessWidget {
                                           navegateTo(
                                               context, ForgetPasswordScreen());
                                         },
-                                        text: 'forget password?',
+                                        text: 'Forget password?',
                                         color: defaultColor)
                                   ],
                                 ),

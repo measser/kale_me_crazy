@@ -25,7 +25,7 @@ class SettingScreen extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Account Info',
+                        'Account info',
                         style: TextStyle(
                           fontSize: 20,
                         ),
@@ -44,7 +44,7 @@ class SettingScreen extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'My Order',
+                        'My order',
                         style: TextStyle(
                           fontSize: 20,
                         ),
@@ -64,7 +64,7 @@ class SettingScreen extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Change Password',
+                        'Change password',
                         style: TextStyle(
                           fontSize: 20,
                         ),
@@ -83,7 +83,7 @@ class SettingScreen extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'About Us',
+                        'About us',
                         style: TextStyle(
                           fontSize: 20,
                         ),
@@ -102,7 +102,7 @@ class SettingScreen extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Review',
+                        'Reviews',
                         style: TextStyle(
                           fontSize: 20,
                         ),

@@ -91,7 +91,7 @@ class AccountInfo extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              'Last Name',
+                              'Last name',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.w600),
                             ),
@@ -110,7 +110,7 @@ class AccountInfo extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              'user name',
+                              'User name',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.w600),
                             ),
@@ -129,7 +129,7 @@ class AccountInfo extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              'Date Of Birth',
+                              'Date of birth',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.w600),
                             ),
@@ -163,7 +163,7 @@ class AccountInfo extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              'Phone Number',
+                              'Phone number',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.w600),
                             ),
@@ -199,60 +199,6 @@ class AccountInfo extends StatelessWidget {
                               type: TextInputType.number,
                               indexLenght: 11,
                             ),
-                            // Row(
-                            //   mainAxisAlignment: MainAxisAlignment.center,
-                            //   crossAxisAlignment: CrossAxisAlignment.center,
-                            //   children: [
-                            //     Row(
-                            //       children: [
-                            //         Text(
-                            //           'male',
-                            //           style: TextStyle(
-                            //             fontSize: 20,
-                            //             fontWeight: FontWeight.w600,
-                            //           ),
-                            //         ),
-                            //         Radio(
-                            //             activeColor: Colors.red,
-                            //             value: 1,
-                            //             groupValue:
-                            //             AccountInfoCubit.get(context).index,
-                            //             onChanged: (value) {
-                            //               AccountInfoCubit.get(context)
-                            //                   .Radio(value);
-                            //               isMale = true;
-                            //             }),
-                            //         SizedBox(
-                            //           width: 10,
-                            //         ),
-                            //       ],
-                            //     ),
-                            //     Row(
-                            //       children: [
-                            //         Text(
-                            //           'female',
-                            //           style: TextStyle(
-                            //             fontSize: 20,
-                            //             fontWeight: FontWeight.w600,
-                            //           ),
-                            //         ),
-                            //         Radio(
-                            //             activeColor: Colors.red,
-                            //             value: 2,
-                            //             groupValue:
-                            //             AccountInfoCubit.get(context).index,
-                            //             onChanged: (value) {
-                            //               AccountInfoCubit.get(context)
-                            //                   .Radio(value);
-                            //               isMale = false;
-                            //             }),
-                            //         SizedBox(
-                            //           width: 10,
-                            //         ),
-                            //       ],
-                            //     )
-                            //   ],
-                            // ),
                             SizedBox(
                               height: 30,
                             ),
