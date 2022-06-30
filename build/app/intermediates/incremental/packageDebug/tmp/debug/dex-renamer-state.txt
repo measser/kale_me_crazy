@@ -1,0 +1,4 @@
+#Thu Jun 30 17:03:27 EET 2022
+base.0=D\:\\FromC\\githup\\kale_me_crazy\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
