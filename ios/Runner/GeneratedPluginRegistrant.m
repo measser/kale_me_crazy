@@ -2,13 +2,9 @@
 //  Generated file. Do not edit.
 //
 
-#import "GeneratedPluginRegistrant.h"
+// clang-format off
 
-#if __has_include(<hexcolor/HexcolorPlugin.h>)
-#import <hexcolor/HexcolorPlugin.h>
-#else
-@import hexcolor;
-#endif
+#import "GeneratedPluginRegistrant.h"
 
 #if __has_include(<shared_preferences/FLTSharedPreferencesPlugin.h>)
 #import <shared_preferences/FLTSharedPreferencesPlugin.h>
@@ -19,7 +15,6 @@
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
-  [HexcolorPlugin registerWithRegistrar:[registry registrarForPlugin:@"HexcolorPlugin"]];
   [FLTSharedPreferencesPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTSharedPreferencesPlugin"]];
 }
 

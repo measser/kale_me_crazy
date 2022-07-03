@@ -1,4 +1,0 @@
-#Fri Jun 10 21:19:24 EET 2022
-base.0=D\:\\FromC\\kale_me_krazy1\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
